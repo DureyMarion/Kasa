@@ -1,0 +1,105 @@
+// Importation de mes mixins et variables
+@import "../../untils/main.scss";
+  
+// Version Desktop
+// Card
+.card {
+  max-width: 1024px;
+  margin: 32px auto;
+  @include petit-radius;
+
+  background: $secondary-color;
+
+// Card fermé
+.card.is-close {
+  background: $tertiary-color;
+}
+
+// Titre et texte
+.card__title,
+.card__text {
+  line-height: 32px;
+  font-size: $h3;
+}
+
+.card__title {
+  @include flex-between;
+
+  margin: 0;
+  padding: 8px 16px;
+  @include petit-radius;
+
+  color: $tertiary-color;
+
+  background: $primary-color;
+
+  cursor: pointer;
+}
+
+.card__title {
+  font-weight: 500;
+}
+
+.card__title span {
+  padding: 4px 0;
+}
+
+.card__title i {
+  padding: 8px 16px;
+}
+
+.card__text {
+  height: 100%;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+
+  color: $primary-color;
+  font-weight: 400;
+  list-style-type: none;
+
+  opacity: 1;
+
+  transition: 200ms;
+}
+
+// Card fermé => état texte
+.card__text.is-close {
+  padding: 0 16px;
+  height: 0;
+
+  opacity: 0;
+}
+
+// Icon Fontawesome
+.card__icon {
+  padding-top: 7px;
+}
+}
+
+// Version Mobile & Tablette
+@media screen and (max-width: 1308px) {
+  // Card
+  .card {
+    margin: 16px auto;
+  
+    // Titre et texte
+    .card__title,
+    .card__text {
+      line-height: 21px;
+      font-size: $h5;
+    }
+
+    .card__title span {
+      padding: 2px 0;
+    }
+
+    .card__title i {
+      padding: 4px 0;
+    }
+
+    .card__text {
+      padding: 16px;
+    }
+  }
+}

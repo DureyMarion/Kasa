@@ -1,0 +1,40 @@
+// Importation de mes mixins et variables
+@import "../../untils/main.scss";
+
+// Version Desktop
+// Footer
+footer {
+    width: 100%;
+    padding: 16px 0;
+
+    text-align: center;
+  
+    background: black;
+  
+  // Image Logo Kasa
+  img {
+    margin: 48px 0 16px 0;
+
+    color: $tertiary-color;
+  }
+  
+  // Texte Copyright
+  p {
+    color: $tertiary-color;
+    font-size: $h3;
+    font-weight: 500;
+  }
+}
+
+// Version Mobile & Tablette
+@media screen and (max-width: 1308px) {
+  // Image Logo Kasa
+  footer img {
+    height: 32px;
+  }
+
+  // Texte copyright
+  footer p {
+    font-size: $h5;
+  }
+}

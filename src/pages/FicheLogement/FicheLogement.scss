@@ -1,0 +1,181 @@
+// Importation de mes mixins et variables
+@import "../../untils/main.scss";
+
+// Version Desktop
+.Logement__header {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  
+  }
+  
+  .Logement__summary-box {
+    max-width: calc(100% - 256px);
+    margin: 0 64px 0 0;
+  }
+  
+  .Logement__title {
+    margin: 0;
+  
+    color: $primary-color;
+    font-size: $h2;
+    font-weight: 500;
+  }
+  
+  .Logement__location {
+    margin: 13px 0 25px 0;
+  
+    color: $primary-color;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+// TAG
+  .Logement__tags-box {
+    display: flex;
+    flex-direction: row;
+
+    margin: 16px 0 0 0;
+  }
+  
+  .Logement__tag {
+    display: inline-block;
+  
+    margin: 0.25rem 1rem 0.25rem 0;
+    padding: 0.25rem 2rem;
+  }
+  
+  // Avatar
+  .Logement__aside-box {
+    width: 193px;
+  }
+  
+  .Logement__host-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .Logement__host-name {
+    margin: 0 16px 0 0;
+  
+    color: $primary-color;
+    font-size: $h6;
+    font-weight: 500;
+  }
+  
+  .Logement__host-picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  
+    font-size: 12px;
+    text-align: center;
+  
+    background: $secondary-color;
+  }
+  
+  // Étoiles
+  .Logement__rating {
+    margin: 24px 0 0 0;
+  
+    text-align: right;
+  }
+ 
+  // Cards
+  .Logement__cards-box {
+    display: flex;
+    justify-content: space-evenly;
+  
+    margin: 0 0 32px 0;
+  }
+  
+  .Logement__card {
+    width: 576px;
+  }
+
+// Version Tablette
+@media screen and (min-width: 888px) and (max-width: 1308px) {
+  // Titre logement
+  .Logement__title {
+    font-size: $h3;
+    line-height: 1.25;
+  }
+  
+  // Etoiles
+  .Logement__rating {
+    font-size: $h4;
+  }
+  
+  // Card
+  .Logement__card {
+    width: 400px;
+  }
+}
+
+// Version Mobile
+@media screen and (max-width: 888px) {
+  .Logement__header {
+    flex-direction: column;
+  
+    padding: 8px 0 0 0;
+  }
+  
+  .Logement__summary-box {
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .Logement__title {
+    font-size: $h6;
+  }
+  
+  .Logement__location {
+    margin: 12px 0;
+  
+    font-size: $h7;
+  }
+  
+  // Avatar
+  .Logement__aside-box {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  
+    width: 100%;
+    margin: 16px 0 0 0;
+  }
+  
+  .Logement__host-box {
+    justify-content: flex-end;
+    width: calc(100% - 144px);
+  }
+  
+  .Logement__host-name {
+    font-size: 12px;
+  }
+  
+  .Logement__host-picture {
+    width: 48px;
+    height: 48px;
+  }
+  
+  // Etoiles
+  .Logement__rating {
+    width: 112px;
+    margin: 0;
+  
+    text-align: left;
+  }
+
+  // Cards
+  .Logement__cards-box {
+    flex-direction: column;
+    margin: 0 20px 20px;
+  
+    .Logement__card {
+      width: 100%;
+    }
+  }
+}

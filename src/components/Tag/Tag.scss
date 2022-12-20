@@ -1,0 +1,41 @@
+// Importation de mes mixins et variables
+@import "../../untils/main.scss";
+
+// Version Desktop
+// Conteneur Tag
+.TagWrapper {
+  @include flex-center;
+
+  margin-right: 10px;
+  min-width: 115px;
+  height: 25px;
+
+  border-radius: 10px;
+  background-color: #ff6060;
+
+  // Texte Tag
+  .TagDescription {
+    text-align: center;
+
+    color: $tertiary-color;
+    font-weight: 500;
+    font-size: 14px;
+    
+    padding: 0 10px;
+    margin: 3px 10px;
+  }
+}
+
+// Version Mobile & Tablette
+@media screen and (max-width: 916px) {
+  // Conteneur Tag
+  .TagWrapper {
+    min-width: 84px;
+    height: 18px;
+  
+    // Texte Tag
+    .TagDescription {
+      font-size: 10px;
+    } 
+  }
+}

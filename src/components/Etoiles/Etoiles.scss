@@ -1,0 +1,15 @@
+// Version Desktop
+// Images
+.star {
+    width: 30px;
+    height: 30px;
+}
+
+// Version Mobile & Tablette
+@media screen and (max-width: 888px) {
+    // Images
+    .star {
+        width: 15px;
+        height: 15px;
+    }
+}

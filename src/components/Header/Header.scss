@@ -1,0 +1,68 @@
+// Importation de mes mixins et variables
+@import "../../untils/main.scss";
+
+// Version Desktop
+// Header
+header {
+  @include flex-between;
+  align-items: center;
+  
+  margin: 57px 100px;
+  
+  // Menu de navigation
+  .main-nav ul {
+    display: flex;
+    align-items: center;
+  }
+  
+  .main-nav li {
+    margin: 0 0 0 57px;
+  
+    text-align: center;
+    list-style-type: none;
+  }
+  
+  // Liens
+  .header-link {
+    color: $primary-color;
+    text-decoration: none;
+  }
+
+  .active-link {
+    text-decoration: underline;
+  }
+
+  li:hover {
+    text-decoration: underline;
+  }
+  
+}
+
+// Version Mobile & Tablette
+@media screen and (max-width: 888px) {
+  // Header
+  header {
+    margin: 20px;
+
+    // Image logo Kasa
+    .header-logo {
+      height: 32px;
+    }
+
+    // Menu de navigation
+    .main-nav ul {
+      padding: 10px;
+    }
+    
+    .main-nav li {
+      margin: 0 0 0 10px;
+      
+    }
+
+    // Liens
+    .header-link {
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+  }
+}

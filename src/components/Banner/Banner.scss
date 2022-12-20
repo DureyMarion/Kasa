@@ -1,0 +1,67 @@
+// Importation de mes mixins et variables
+@import "../../untils/main.scss";
+
+// Version Desktop
+// Banner
+.banner {
+  @include flex-center; 
+}
+
+.hero-banner {
+  position: relative;
+
+  width: 1240px;
+  height: 223px;
+  @include border-radius;
+  overflow: hidden;
+  margin: 0 40px;
+  
+  background-color: $tertiary-color;
+
+  // Image
+  img {
+    width: 100%;
+    height: 223px;
+  
+    object-fit: cover;
+    opacity: 3;
+    filter: brightness(70%);
+
+  }
+  
+  // Titre
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    width: 80%;
+    margin: 0;
+  
+    color: $tertiary-color;
+    font-weight: 500;
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+  
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Version Mobile & Tablette
+@media screen and (max-width: 888px) {
+  .hero-banner {
+    height: 112px;
+    margin: 20px;
+  }
+
+  // Titre
+  .hero-banner h1 {
+    font-size: $h3;
+    text-align: left;
+  
+    left: 40%;
+
+    width: 65%;
+  }
+}

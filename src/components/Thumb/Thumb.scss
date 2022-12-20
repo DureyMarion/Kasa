@@ -1,0 +1,66 @@
+// Importation de mes mixins et variables
+@import "../../untils/main.scss";
+
+// Version Desktop
+// Configuration du Thumb
+.thumb,
+.thumb__filter {
+    width: 340px;
+    height: 340px;
+}
+      
+.thumb {
+    position: relative;
+      
+    margin: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+      
+    background: $primary-color;
+    
+    // image du logement
+    .thumb__cover {
+        width: 100%;
+        height: 100%;
+      
+        color: white;
+        text-decoration: none;
+      
+        object-fit: cover;
+    }
+    
+    // Filtre sur l'image
+    .thumb__filter {
+        position: absolute;
+        top: 0;
+
+        background: linear-gradient(185deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.5));
+    }
+      
+    // Titre du logement
+    .thumb__title {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+      
+        margin: 0;
+      
+        color: white;
+        font-size: $h4;
+        font-weight: 500;
+    }
+}   
+
+// Version Mobile & Tablette
+@media screen and (max-width: 888px) {
+    // Configuration du Thumb
+    .thumb,
+    .thumb__filter {
+      max-width: 100%;
+      height: 256px;
+    }
+  
+    .thumb {
+      margin: 8px 0;
+    }
+  }

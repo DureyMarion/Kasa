@@ -1,0 +1,24 @@
+// Mixins sur la disposition de l'élément
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+// Mixins sur le rendu visuel de l'élément
+@mixin border-radius {
+    border-radius: 25px;
+}
+
+@mixin petit-radius {
+    border-radius: 5px;
+}

@@ -1,0 +1,35 @@
+// Importation de mes mixins et variables
+@import "../../untils/main.scss";
+
+// Version Desktop
+// Thumb
+.thumb-home {
+    @include flex-center;
+
+    @include border-radius;
+    background: $secondary-color;
+    margin: 43px 100px;
+
+    .thumb-box {
+        @include flex-center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 40px 0;
+    }
+}
+
+// Version Mobile et Tablette
+@media screen and (max-width: 888px) {
+    // Thumb
+    .thumb-home {
+        background: $tertiary-color;
+        margin: 20px;
+
+        .thumb-box {
+            @include flex-column;
+            align-items: center;
+            margin: 0;
+        }
+    }
+}
+

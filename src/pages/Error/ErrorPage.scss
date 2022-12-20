@@ -1,0 +1,61 @@
+// Importation de mes mixins et variables
+@import "../../untils/main.scss";
+
+// Version Desktop
+// Page Erreur404
+.Error404 {
+  text-align: center;
+  
+  // Grand titre
+  .Error404__status-code {
+    margin: 128px 0 64px 0;
+    font-size: 288px;
+    font-weight: 700;
+    color: $primary-color;
+  }
+  
+  // Texte
+  .Error404__text {
+    font-size: $h2;
+    font-weight: 500;
+    color: $primary-color;
+  }
+  
+  // Lien de retour sur Home
+  .Error404__link-to-home {
+    display: inline-block;
+  
+    margin: 128px 0;
+  
+    color: $primary-color;
+    font-size: $h3;
+    text-decoration: underline; 
+  }
+}
+
+// Version Mobile & Tablette
+@media screen and (max-width: 888px) {
+  // Page Erreur404
+  .Error404 {
+    margin: 0 20px;
+
+    // Grand titre
+    .Error404__status-code {
+      margin: 128px 0 16px 0;
+
+      font-size: 96px;
+    }
+
+    // Texte
+    .Error404__text {
+      font-size: 18px;
+    }
+
+    // Lien de retour sur Home
+    .Error404__link-to-home {
+      margin: 64px 0;
+
+      font-size: 14px;
+    }
+  }
+}

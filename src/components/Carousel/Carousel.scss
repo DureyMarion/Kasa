@@ -1,0 +1,119 @@
+// Importation de mes mixins et variables
+@import "../../untils/main.scss";
+
+// Version Desktop
+// Taille du Carousel
+.house__carousel {
+  width: 100%;
+  height: 415px;
+}
+
+// Affichage des nombres
+.number__styles {
+  @include flex-center;
+  align-items: center;
+
+  color: $tertiary-color;
+  width: 100%;
+  
+  font-size: 18px;
+  position: absolute;
+  bottom: 24px;
+  transform: translate(0, -50%);
+}
+
+// Apparence des slides
+.slider__styles {
+  height: 415px;
+  position: relative;
+
+  overflow: hidden;
+  @include border-radius;
+
+  margin: 0 100px;
+}
+
+// Passage des slides de gauche à droite
+// Animation des slides
+.slide__styles-right {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  transform: translatex(100%);
+}
+
+.slide__styles-hide {
+  transform: translatex(0);
+}
+  
+.slide__styles-left {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  transform: translatex(-100%);
+}
+
+.right {
+  width: 100%;
+  height: 100%;
+
+  //transition-duration: 0.6s;
+  transform: translateX(-100%);
+}
+
+.left {
+  width: 100%;
+  height: 100%;
+
+  //transition-duration: 0.6s;
+  transform: translateX(100%);
+}
+
+.slide__styles-one {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  @include border-radius;
+}
+
+// Fléches gauche et droite du Carousel
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  width: 47px;
+}
+
+.left__arrow {
+  left: 20px;
+  z-index: 1;
+}
+
+.right__arrow {
+  right: 20px;
+  z-index: 1;
+}
+
+// Version Mobile & Tablette
+@media screen and (max-width: 888px) {
+  // Apparence Slides
+  .slider__styles {
+    margin: 0 20px;
+    height: 255px;
+    border-radius: 10px;
+  }
+
+  //Affichage nombres
+  .number__styles {
+    visibility: hidden;
+  }
+
+  // Flèches Carousel
+  .arrow {
+    width: 11px;
+  }
+}

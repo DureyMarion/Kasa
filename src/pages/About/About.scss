@@ -1,0 +1,26 @@
+// Importation de mes mixins et varaiables
+@import "../../untils/main.scss";
+
+// Version Desktop
+// Page About
+.About {
+    padding: 16px;
+}
+
+// Version Mobile & Tablette
+@media screen and (max-width: 888px) {
+    // Page About
+    .About {
+      padding: 0;
+    }
+    
+    // AboutBanner
+    .About .banner {
+        padding: 0 20px;
+    }
+    
+    // Card
+    .About .card-box {
+        margin: 0 20px;
+    }
+}

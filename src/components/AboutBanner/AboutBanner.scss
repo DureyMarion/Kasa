@@ -1,0 +1,34 @@
+// Importation de mes mixins et variables
+@import "../../untils/main.scss";
+
+// Version Desktop
+// AboutBanner
+.banner {
+  @include flex-center; 
+}
+
+.about-banner {
+    width: 1240px;
+    height: 223px;
+    @include border-radius;
+    overflow: hidden;
+  
+    background-color: $secondary-color;
+  
+  // Image
+  img {
+    width: 100%;
+    height: 223px;
+  
+    object-fit: cover;
+    opacity: 3;
+    filter: brightness(70%);
+  }
+}
+
+// Version Mobile & Tablette
+@media screen and (max-width: 888px) {
+  .hero-banner {
+    height: 112px;
+  }
+}
