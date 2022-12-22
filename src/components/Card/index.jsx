@@ -14,17 +14,24 @@ class Card extends React.Component {
     constructor (props) {
         super(props);
         
+        // State (état, données)
+        // Initialisé à card fermé
         this.state        = {
             isOpen: false
         };
         this.updateIsOpen = this.updateIsOpen.bind(this);
     }
     
+    // Comportements
+    // Setter => set.... (fonction asynchrone)
+    // Modification du state => actualisation de l'affichage (Re-render) => ouverture du card
     updateIsOpen () {
         this.setState({isOpen: !this.state.isOpen});
     }
     
+   
     render () {
+        // Création Variable pour utiliser deux icons FontAwesome
         const cardIcon = this.state.isOpen ? faChevronUp : faChevronDown;
         
         // Affichage du Card
@@ -32,6 +39,7 @@ class Card extends React.Component {
             <section
                 className={`card${this.state.isOpen ? ' is-open' : ' is-close'}`}
             >
+                {/* Événement/Comportement */}
                 <h2 className="card__title" onClick={this.updateIsOpen}>
                     <span>{this.props.title}</span>
                     <span className={cardIcon}></span>
@@ -43,6 +51,7 @@ class Card extends React.Component {
                         this.state.isOpen ? 'is-open' : 'is-close'
                     }`}
                 >
+                    {/* Méthode Map => Création d'un 2eme tableau à partir des éléments du 1er tableau */}
                     {this.props.textArray.map((item, index) => (
                         <li key={`item-${index}`}>{item}</li>
                     ))}

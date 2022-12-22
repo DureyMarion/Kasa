@@ -19,7 +19,8 @@ import reportWebVitals from './reportWebVitals';
 // Création de App
 // Gestion des routes avec redirection sur la bonne page
 function App() {
-  
+
+// Affichage de la page web
 return(
       <div>
         <Header />

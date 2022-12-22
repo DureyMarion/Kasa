@@ -14,9 +14,9 @@ import "./Home.scss"
 class Home extends React.Component {
     render() {
       // Récupération des données
-      /*fetch('./data.json')
+      fetch('./data.json')
       .then((response) => response.json())
-      .then((data) => console.log(data));*/
+      .then((data) => console.log(data));
       
       const data = [
         {

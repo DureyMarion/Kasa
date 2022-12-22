@@ -1,7 +1,6 @@
 // Importation des modules
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-//import Products from "../../data.json";
 
 // Importation des components utilisés
 import Carousel from '../../components/Carousel/index.jsx';
@@ -18,7 +17,7 @@ class FicheLogement extends React.Component {
     render () {
 
 
-        const data = [
+       const data = [
             {
                 'id': 'c67ab8a7',
                 'title': 'Appartement cosy',

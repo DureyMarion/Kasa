@@ -12,6 +12,7 @@ import "./Banner.scss";
 class Banner extends Component {
   constructor(props) {
     super(props)
+    // State (état, données)
     this.state = {
     }
   }

@@ -9,6 +9,8 @@ import "./Tag.scss"
 class Tag extends Component {
     constructor(props) {
       super(props)
+
+      // State (état, données)
       this.state = {
       }
     }
@@ -17,6 +19,7 @@ class Tag extends Component {
     // Création Propstypes
     const { tags } = this.props
 
+    // Affichage de Tag
     return (
       <div className="TagWrapper">
         <p className="TagDescription">

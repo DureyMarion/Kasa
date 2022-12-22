@@ -10,6 +10,8 @@ import "./Thumb.scss"
 class Thumb extends React.Component {
     constructor(props) {
       super(props)
+
+      // State (état, données)
       this.state = {
       }
     }
@@ -17,7 +19,12 @@ class Thumb extends React.Component {
   render() {
     // Création des props
     const { id, cover, title,location } = this.props
+
+    // Affichage de Thumb
     return (
+
+      // Événement/comportament => renvoie à la page Home 
+      // scrollTo(x,y) => fait défiler la fenêtre aux coordonnées spécifiées
       <Link
         className="thumb-wrapper"
         to={`/location/${id}`}

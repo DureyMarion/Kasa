@@ -9,7 +9,8 @@ import ArrowRight from "../../assets/vector-right.svg";
 // Importation fichier Scss
 import "./Carousel.scss";
 
-// Création du component Carousel
+// State (état, données)
+// Initialisation du component Carousel
 function Carousel(product) {
    const [currentIndex, setCurrentIndex] = useState(0);
    const [right, setRight] = useState(true);
@@ -22,7 +23,11 @@ function Carousel(product) {
       });
    }, [slides]);
 
-   // Aller en arrière
+   
+   // Comportements
+   // Setter => set.... (fonction asynchrone)
+
+   // Modification du state => actualisation de l'affichage (Re-render) => Retour en arrière
    const goToPrevious = () => {
       setRight(false);
       const isFirstSlide = currentIndex === 0;
@@ -30,7 +35,7 @@ function Carousel(product) {
       setCurrentIndex(newIndex);
    };
 
-   // Aller en avant, à la prochaine
+   // Modification du state => actualisation de l'affichage (Re-render) => Aller en Avant
    const goToNext = () => {
       setRight(true);
       const isLastSlide = currentIndex === slides.length - 1;
@@ -50,6 +55,7 @@ function Carousel(product) {
    return moreOneImg() ? (
       <div className="slider__styles">
          <img
+         /* Événement/Comportement => retour en arrière */
             className="arrow left__arrow"
             src={ArrowLeft}
             alt="flèche vers la gauche"
@@ -57,11 +63,13 @@ function Carousel(product) {
          ></img>
 
          <img
+         /* Événement/Comportement => aller en avant */
             className="arrow right__arrow"
             src={ArrowRight}
             alt="flèche vers la droite"
             onClick={goToNext}
          ></img>
+         {/* Méthode Map => Création d'un 2eme tableau à partir des éléments du 1er tableau */}
          {slides.map((slide, index) => {
             return (
                <div
@@ -84,6 +92,7 @@ function Carousel(product) {
                </div>
             );
          })}
+         {/* Gestion du N° d'image selon le nombre total des Slides */}
          <span className="number__styles">
             {currentIndex + 1}/{slides.length}
          </span>

@@ -10,10 +10,12 @@ import logo from "../../assets/LOGO.svg";
 
 // Création du component Header
 class Header extends React.Component {
+
+  // Affichage du Header
   render() {
     return (
       <header>
-        <Link to="/">
+        <Link to="/"> {/* Redirection page Home */}
           <img className="header-logo" src={logo} alt="Kasa" />
         </Link>
 
@@ -21,8 +23,8 @@ class Header extends React.Component {
           <ul>
             <li>
               <NavLink
-                className="header-link active-link"
                 to="/"
+                className="header-link"
               >
                 Accueil
               </NavLink>
@@ -33,8 +35,8 @@ class Header extends React.Component {
                 className="header-link"
                 to="/a-propos"
               >
-                &Agrave; propos
-              </NavLink>
+                &Agrave; propos {/* &Agrave; => À */}
+              </NavLink> 
             </li>
           </ul>
         </nav>

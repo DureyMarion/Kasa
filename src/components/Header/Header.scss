@@ -26,16 +26,13 @@ header {
   .header-link {
     color: $primary-color;
     text-decoration: none;
+
+    font-size: $h3;
   }
 
-  .active-link {
+  nav a.active{
     text-decoration: underline;
   }
-
-  li:hover {
-    text-decoration: underline;
-  }
-  
 }
 
 // Version Mobile & Tablette
