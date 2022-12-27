@@ -1,8 +1,8 @@
-// Importation Modules
+// Importation composants React
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-// Importation du component parent App
+// Importation du component enfant App
 import App from "./App";
 
 // Création de la variable "root" repris dans le fichier HTML

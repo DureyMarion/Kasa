@@ -1,4 +1,4 @@
-// Importation des modules
+// Importation des composants React
 import React from "react";
 import { useState, useEffect } from "react";
 
@@ -99,7 +99,7 @@ function Carousel(product) {
       </div>
    ) : (
       <img
-         src={`${slides[currentIndex]}`}
+         src={slides[currentIndex]}
          className="slide__styles-one"
          alt="logement"
       ></img>

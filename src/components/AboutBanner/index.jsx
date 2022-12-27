@@ -1,4 +1,4 @@
-// Importation des modules
+// Importation des composants React
 import { Component } from "react"
 
 // Importation image
@@ -10,6 +10,7 @@ import "./AboutBanner.scss";
 // Création du component AboutBanner
 class AboutBanner extends Component {
 
+  // Premier affichage + Re-render
   render() {
     // Affichage du AboutBanner
     return (

@@ -1,4 +1,4 @@
-// Importation Modules
+// Importation des composants React
 import React from 'react';
 
 // Importation Images

@@ -1,4 +1,4 @@
-// Importation des modules
+// Importation des composants React
 import PropTypes from 'prop-types'
 import { Component } from "react"
 
@@ -10,6 +10,7 @@ import "./Banner.scss";
 
 // Création du component Banner
 class Banner extends Component {
+  // Méthode utilisée pour initialiser l'état d'un objet dans une classe
   constructor(props) {
     super(props)
     // State (état, données)
@@ -17,6 +18,7 @@ class Banner extends Component {
     }
   }
 
+  // Premier affichage + Re-render
   render() {
     const { title } = this.props
 

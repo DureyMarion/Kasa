@@ -1,4 +1,4 @@
-// Import Modèles
+// Import des composants React
 import PropTypes from "prop-types"
 import React from "react";
 import { Link } from "react-router-dom";
@@ -8,6 +8,8 @@ import "./Thumb.scss"
 
 // Création du component Thumb
 class Thumb extends React.Component {
+  
+    // Méthode utilisée pour initialiser l'état d'un objet dans une classe
     constructor(props) {
       super(props)
 
@@ -16,8 +18,9 @@ class Thumb extends React.Component {
       }
     }
 
+  // Premier affichage + Re-render
   render() {
-    // Création des props
+    // Utilisation des props
     const { id, cover, title,location } = this.props
 
     // Affichage de Thumb

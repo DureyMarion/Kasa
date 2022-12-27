@@ -1,4 +1,4 @@
-// Importation Module
+// Importation des composants React
 import React from "react";
 
 // Importation des components utilisés
@@ -29,12 +29,15 @@ const ABOUT_CONTENTS = [
 
 // Création de la page About
 class About extends React.Component {
+  // Premier affichage + Re-render
   render() {
+    // Affichage
     return (
       <main className="About">
         <AboutBanner />
   
         <div className="card-box">
+          {/* Méthode Map => Création d'un 2eme tableau à partir des éléments du 1er tableau */}
           {ABOUT_CONTENTS.map(({ title, text }) => (
             <Card key={`about-${title}`} title={title} textArray={[text]} />
           ))}

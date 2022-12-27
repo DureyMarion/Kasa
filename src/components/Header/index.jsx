@@ -1,4 +1,4 @@
-// Importation Modules
+// Importation des composants React
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
@@ -11,8 +11,10 @@ import logo from "../../assets/LOGO.svg";
 // Création du component Header
 class Header extends React.Component {
 
-  // Affichage du Header
+  // Premier affichage + Re-render
   render() {
+    
+    // Affichage du Header
     return (
       <header>
         <Link to="/"> {/* Redirection page Home */}

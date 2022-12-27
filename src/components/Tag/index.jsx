@@ -1,4 +1,4 @@
-// Importation Modules
+// Importation des composants React
 import PropTypes from 'prop-types'
 import { Component } from 'react'
 
@@ -7,6 +7,7 @@ import "./Tag.scss"
 
 // Création du component Tag
 class Tag extends Component {
+    // Méthode utilisée pour initialiser l'état d'un objet dans une classe
     constructor(props) {
       super(props)
 
@@ -15,15 +16,16 @@ class Tag extends Component {
       }
     }
 
+  // Premier affichage + Re-render
   render() {
-    // Création Propstypes
+    // Création de la props
     const { tags } = this.props
 
     // Affichage de Tag
     return (
       <div className="TagWrapper">
         <p className="TagDescription">
-            {tags}
+            {tags} {/* Consommation de la props => accès aux propriéts */}
         </p>
       </div>
     )

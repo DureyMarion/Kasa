@@ -1,4 +1,4 @@
-// Importation Modules
+// Importation des composants React
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -10,7 +10,10 @@ import logoWhite from "../../assets/logo-footer.svg";
 
 // Création du component Footer
 class Footer extends React.Component {
+
+  // Premier affichage + Re-render
   render() {
+    // Affichage de Footer
     return (
       <footer>
         
