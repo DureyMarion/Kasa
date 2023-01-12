@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+#Kasa
+
+Create a real estate rental web application with React.
+Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
